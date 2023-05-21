@@ -9,19 +9,19 @@ def getInput():
     items.append(int(input(f"No of units required for product {chr(65 + i)}: ")))
     wraps.append(input("Should be gift wrapped (yes/no): "))
    
-  retruns items, wraps
+  return items, wraps
   
- def calculateCost(prices, items):
+def calculateCost(prices, items):
     costs, subtotal = [], 0
     
     for i in range(3):
         cost_per_product = items[i]*prices[i]
-        cost.append(cost_per_product)
+        costs.append(cost_per_product)
         subtotal += cost_per_product
         
     return costs, subtotal
   
- def applyDiscount(iyems, prices, subtotal):
+def applyDiscount(items, prices, subtotal):
       discounts = []
       total_quantity = sum(items)
       
@@ -66,7 +66,7 @@ def getInput():
       return best_offer[0]
     
     
- def finalPrice(items, wraps, offer_price):
+def finalPrice(items, wraps, offer_price):
     total_units = sum(items)
     gift_wraps = 0
     
@@ -81,7 +81,7 @@ def getInput():
     print(f"final price: {final_price}")
     
     
- def showOutput(items, costs, subtotal):
+def showOutput(items, costs, subtotal):
     for i in range(3):
         print(f"product {chr(65 + i)}")
         print("======================")
@@ -91,7 +91,7 @@ def getInput():
         
     print(f"subtotal: {subtotal}")
     
- def main():
+def main():
     prices = [20, 40, 50]
     items, wraps = getInput()
     costs, subtotal = calculateCost(prices, items)
@@ -101,4 +101,4 @@ def getInput():
     
     
     
- main()
+main()
