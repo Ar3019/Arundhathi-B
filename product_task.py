@@ -95,7 +95,7 @@ def main():
     prices = [20, 40, 50]
     items, wraps = getInput()
     costs, subtotal = calculateCost(prices, items)
-    showOutput(items, cost, subtotal)
+    showOutput(items, costs, subtotal)
     offer_price = applyDiscount(items, prices, subtotal)
     finalPrice(items, wraps, offer_price)
     
