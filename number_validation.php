@@ -1,4 +1,4 @@
-# Code by Arundhathi B
+# Arundhathi B
 # php program for validating a number.
 
 <?php
